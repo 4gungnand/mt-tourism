@@ -23,13 +23,13 @@ const mapContainerStyle = {
 };
 
 const center = {
-  lat: 0.332925379709012,
-  lng: 95.64343198123234,
+  lat: 0.3361209893422254, 
+  lng: 100.64194674014762,
 };
 
 const MapComponent: React.FC = () => {
   const [markers, setMarkers] = useState<Array<{ lat: number; lng: number; description: string }>>([
-    { lat: 0.342925379709012, lng: 100.64343198123234, description: 'Muara Takus Temple' },
+      { lat: center.lat, lng: center.lng, description: 'Muara Takus Temple' },
   ]);
 
   const MapClickHandler = () => {
