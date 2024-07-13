@@ -1,3 +1,4 @@
+import Destinasi from 'components/Destinasi';
 import Footer from 'components/Footer';
 import Intro from 'components/Intro';
 import Landing from 'components/Landing';
@@ -10,7 +11,8 @@ const Map = dynamic(() => import('components/Map'), { ssr: false });
 const Home: NextPage = () => {
   return (
     <div className="min-h-screen bg-gray-100">
-      <Landing  />
+      <Landing />
+      <Destinasi />
       <Intro />
       <Map />
       <Umkm />

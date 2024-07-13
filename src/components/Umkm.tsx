@@ -1,6 +1,4 @@
-import * as React from "react";
-
-const Umkm = () => {
+export default function Umkm () {
   return (
     <div className="flex flex-col justify-center bg-white">
       <div className="flex justify-center items-center px-16 py-20 w-full bg-teal-50 max-md:px-5 max-md:max-w-full">
@@ -69,5 +67,3 @@ const Umkm = () => {
     </div>
   );
 }
-
-export default Umkm;

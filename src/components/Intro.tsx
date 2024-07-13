@@ -1,6 +1,4 @@
-import * as React from "react";
-
-const Intro = () => {
+export default function Intro () {
   return (
     <div className="flex flex-col justify-center bg-white">
       <div className="flex justify-center items-center px-16 py-20 w-full bg-white max-md:px-5 max-md:max-w-full">
@@ -35,5 +33,3 @@ const Intro = () => {
     </div>
   );
 }
-
-export default Intro;

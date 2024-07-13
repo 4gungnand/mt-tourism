@@ -4,7 +4,7 @@ const Nav = () => {
       <div className="flex-auto self-stretch my-auto text-4xl">
         MuaraTakus
       </div>
-      <div className="flex gap-5 self-stretch my-auto">
+      <div className="flex gap-5 self-stretch my-auto font-normal">
         <div>Profil</div>
         <div>Destinasi</div>
         <div className="flex-auto">Tentang Kami</div>

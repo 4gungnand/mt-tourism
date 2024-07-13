@@ -1,6 +1,4 @@
-import * as React from "react";
-
-const Footer = () => {
+export default function Footer (){
   return (
     <div className="flex flex-col items-center px-16 pt-20 pb-6 bg-white max-md:px-5">
       <div className="flex flex-col w-full max-w-[1087px] max-md:max-w-full">
@@ -14,49 +12,49 @@ const Footer = () => {
             <div className="flex gap-3 mt-8 max-md:pr-5">
               <img
                 loading="lazy"
-                srcSet="..."
+                srcSet="/Facebook.svg"
                 className="shrink-0 w-6 aspect-square"
               />
               <img
                 loading="lazy"
-                srcSet="..."
+                srcSet="/Instagram.svg"
                 className="shrink-0 w-6 aspect-square"
               />
               <img
                 loading="lazy"
-                srcSet="..."
+                srcSet="/Twitter.svg"
                 className="shrink-0 w-6 aspect-square"
               />
               <img
                 loading="lazy"
-                srcSet="..."
+                srcSet="YouTube.svg"
                 className="shrink-0 w-6 aspect-square"
               />
               <img
                 loading="lazy"
-                srcSet="..."
+                srcSet="TikTok.svg"
                 className="shrink-0 w-6 aspect-square"
               />
             </div>
           </div>
-          <div className="flex-auto my-auto max-md:max-w-full">
+          <div className="flex-auto my-auto max-md:max-w-full ml-40">
             <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-              <div className="flex flex-col w-[24%] max-md:ml-0 max-md:w-full">
+              <div className="flex flex-col w-[20%] max-md:ml-0 max-md:w-full">
                 <div className="flex flex-col grow text-xl text-teal-900 max-md:mt-10">
                   <div className="text-2xl font-bold">Menu</div>
                   <div className="mt-7">Home</div>
-                  <div className="mt-5">Destinesi</div>
+                  <div className="mt-5">Destinasi</div>
                   <div className="mt-5">Tentang Kami</div>
                 </div>
               </div>
-              <div className="flex flex-col ml-5 w-[34%] max-md:ml-0 max-md:w-full">
+              <div className="flex flex-col ml-5 w-[29%] max-md:ml-0 max-md:w-full">
                 <div className="flex flex-col text-xl text-teal-900 max-md:mt-10">
                   <div className="text-2xl font-bold">Pemesanan</div>
                   <div className="mt-6">Perjalanan Personal</div>
                   <div className="mt-3.5">Perjalanan Grup</div>
                 </div>
               </div>
-              <div className="flex flex-col ml-5 w-[42%] max-md:ml-0 max-md:w-full">
+              <div className="flex flex-col ml-5 w-[32%] max-md:ml-0 max-md:w-full">
                 <div className="flex flex-col text-xl text-teal-900 max-md:mt-10">
                   <div className="text-2xl font-bold">Informasi Lanjutan</div>
                   <div className="mt-4">Terms & Condition</div>
@@ -74,5 +72,3 @@ const Footer = () => {
     </div>
   );
 }
-
-export default Footer;
