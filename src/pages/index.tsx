@@ -2,6 +2,7 @@ import Destinasi from 'components/Destinasi';
 import Footer from 'components/Footer';
 import Intro from 'components/Intro';
 import Landing from 'components/Landing';
+import Pricing from 'components/Pricing';
 import Umkm from 'components/Umkm';
 import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
       <Intro />
       <Map />
       <Umkm />
+      <Pricing />
       <Footer />
     </div>
   );

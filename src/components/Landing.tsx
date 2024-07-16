@@ -32,7 +32,7 @@ export default function Landing() {
                   <div className="flex justify-center items-center px-4 bg-lime-200 h-[60px] rounded-[100px] w-[60px]">
                     <img
                       loading="lazy"
-                      src="/arrow.svg"
+                      src="/Arrow.svg"
                       className=""
                     />
                   </div>
