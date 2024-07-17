@@ -13,7 +13,7 @@ type CarouselProps = {
 
 export default function Carousel({ slides }: CarouselProps) {
     const sliderRef = useRef<Slider | null>(null);
-    const [current, setCurrent] = useState(3); // Start with the fourth image (index 3)
+    const [current, setCurrent] = useState(3);
 
     const settings = {
         infinite: true,
@@ -22,24 +22,24 @@ export default function Carousel({ slides }: CarouselProps) {
         slidesToScroll: 1,
         initialSlide: current,
         centerMode: true,
-        centerPadding: '60px', // Adjust center padding to create larger gaps and centering effect
+        centerPadding: '60px',
         beforeChange: (oldIndex: number, newIndex: number) => setCurrent(newIndex),
     };
 
     return (
         <div className="relative w-full flex justify-center items-center py-20">
-            <div className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 relative"> {/* Adjust width to make the carousel wider */}
+            <div className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 relative">
                 <Slider ref={sliderRef} {...settings}>
                     {slides.map((slide, index) => (
                         <div key={index} className="h-96 flex justify-center items-center">
                             <img
                                 src={slide.url}
                                 alt={`Slide ${index}`}
-                                className="object-cover w-full h-full"
+                                className="object-cover w-full h-full rounded-xl"
                                 style={{
                                     zIndex: index === current ? 2 : 1,
                                     transition: 'transform 0.5s ease-in-out',
-                                    transform: index === current ? 'scale(1.5)' : '',
+                                    transform: index === current ? 'scale(1)' : 'scale(0.8)',
                                 }}
                             />
                         </div>
