@@ -2,7 +2,7 @@ import Nav from "./Nav";
 
 export default function Landing() {
   return (
-    <div className="flex overflow-hidden relative flex-col justify-center self-stretch border border-black border-solid min-h-[900px]">
+    <div className="flex overflow-hidden relative flex-col justify-center self-stretch min-h-[900px]">
       <img
         loading="lazy"
         src="/images/candi.jpeg"

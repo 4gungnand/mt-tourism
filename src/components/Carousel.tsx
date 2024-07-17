@@ -50,7 +50,7 @@ export default function Carousel({ slides }: CarouselProps) {
                 {slides.map((slide, index) => (
                     index === current && (
                         <div
-                            className='absolute bottom-[-100px] left-1/2 transform -translate-x-1/2 w-full max-w-5xl mx-auto text-center text-white'
+                            className='absolute bottom-[-120px] left-1/2 transform -translate-x-1/2 w-full max-w-5xl mx-auto text-center text-white'
                             style={{
                                 animation: 'fadeIn 1s ease-out',
                             }}

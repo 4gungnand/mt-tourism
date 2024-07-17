@@ -29,7 +29,7 @@ const center = {
 
 const MapComponent: React.FC = () => {
   const [markers, setMarkers] = useState<Array<{ lat: number; lng: number; description: string }>>([
-      { lat: center.lat, lng: center.lng, description: 'Muara Takus Temple' },
+      { lat: center.lat, lng: center.lng, description: 'Candi Muara Takus' },
   ]);
 
   const MapClickHandler = () => {
