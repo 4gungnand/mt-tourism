@@ -1,11 +1,11 @@
-const Pricing = () => {
+const Paket = () => {
   return (
     <div className="flex flex-col justify-center mb-96">
       <div className="h-screen gap-[60px] w-full flex flex-col items-center py-20">
         <div className="flex flex-col items-center mt-12 mb-16 w-full max-w-[1075px] max-md:my-10 max-md:max-w-full">
           <div className="flex flex-col items-center text-center gap-3">
             <h1 className="font-bold text-6xl text-teal-900">
-              Pricing
+              Paket 
             </h1>
             <p className="mt-11 text-xl leading-8 text-center text-teal-900 max-md:mt-10 max-md:max-w-full">
               Pilih paket wisata yang sesuai dengan kebutuhan Anda. Dapatkan
@@ -51,7 +51,7 @@ const Pricing = () => {
   );
 };
 
-export default Pricing;
+export default Paket;
 
 const PricingCard = ({
   title,

@@ -8,6 +8,7 @@ export default function Landing() {
         src="/images/candi.jpeg"
         className="object-cover absolute inset-0 size-full"
       />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#004400] to-[#002200] opacity-60"></div>
       <div className="flex relative justify-center items-center px-16 py-16 w-full shadow-sm max-md:px-5 max-md:max-w-full">
         <div className="flex flex-col mb-32 w-full max-w-[1034px] max-md:mb-10 max-md:max-w-full">
           <Nav />

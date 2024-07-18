@@ -1,4 +1,4 @@
-export default function Footer (){
+export default function Footer() {
   return (
     <div className="flex flex-col items-center px-16 pt-20 pb-6 bg-white max-md:px-5">
       <div className="flex flex-col w-full max-w-[1087px] max-md:max-w-full">
@@ -10,31 +10,41 @@ export default function Footer (){
               bersama kami
             </div>
             <div className="flex gap-3 mt-8 max-md:pr-5">
-              <img
-                loading="lazy"
-                srcSet="/Facebook.svg"
-                className="shrink-0 w-6 aspect-square"
-              />
-              <img
-                loading="lazy"
-                srcSet="/Instagram.svg"
-                className="shrink-0 w-6 aspect-square"
-              />
-              <img
-                loading="lazy"
-                srcSet="/Twitter.svg"
-                className="shrink-0 w-6 aspect-square"
-              />
-              <img
-                loading="lazy"
-                srcSet="YouTube.svg"
-                className="shrink-0 w-6 aspect-square"
-              />
-              <img
-                loading="lazy"
-                srcSet="TikTok.svg"
-                className="shrink-0 w-6 aspect-square"
-              />
+              <a href="https://www.tiktok.com/@kampar_memancar" target="_blank" rel="noopener noreferrer">
+                <img
+                  loading="lazy"
+                  srcSet="TikTok.svg"
+                  className="shrink-0 w-6 aspect-square"
+                />
+              </a>
+              <a href="https://www.instagram.com/kamparmemancar" target="_blank" rel="noopener noreferrer">
+                <img
+                  loading="lazy"
+                  srcSet="/Instagram.svg"
+                  className="shrink-0 w-6 aspect-square"
+                />
+              </a>
+              <a href="https://twitter.com/kamparmemancar" target="_blank" rel="noopener noreferrer">
+                <img
+                  loading="lazy"
+                  srcSet="/Twitter.svg"
+                  className="shrink-0 w-6 aspect-square"
+                />
+              </a>
+              <a href="https://www.youtube.com/kamparmemancar" target="_blank" rel="noopener noreferrer">
+                <img
+                  loading="lazy"
+                  srcSet="YouTube.svg"
+                  className="shrink-0 w-6 aspect-square"
+                />
+              </a>
+              <a href="https://www.facebook.com/kamparmemancar" target="_blank" rel="noopener noreferrer">
+                <img
+                  loading="lazy"
+                  srcSet="/Facebook.svg"
+                  className="shrink-0 w-6 aspect-square"
+                />
+              </a>
             </div>
           </div>
           <div className="flex-auto my-auto max-md:max-w-full ml-40">
