@@ -13,13 +13,17 @@ const Home: NextPage = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <Landing />
-      <div className='-mt-20 relative z-10'>
+      <div className='-mt-20 relative z-10' id='destinasi-section'>
         <Destinasi />
       </div>
       <Intro />
       <Map />
-      <Umkm />
-      <Paket />
+      <div id="umkm-section">
+        <Umkm />
+      </div>
+      <div id="paket-section">
+        <Paket />
+      </div>
       <Footer />
     </div>
   );

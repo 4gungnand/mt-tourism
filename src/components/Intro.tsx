@@ -2,7 +2,7 @@ export default function Intro () {
   return (
     <div className="flex flex-col justify-center bg-white">
       <div className="flex justify-center items-center px-16 py-20 w-full bg-white max-md:px-5 max-md:max-w-full">
-        <div className="mt-60 mb-16 max-w-full w-[969px] max-md:my-10">
+        <div className="mt-24 mb-16 max-w-full w-[969px] max-md:my-10">
           <div className="flex gap-5 max-md:flex-col max-md:gap-0">
             <div className="flex flex-col w-[57%] max-md:ml-0 max-md:w-full">
               <div className="flex flex-col grow items-end px-16 pt-20 pb-px w-full text-2xl font-bold leading-9 text-black rounded-3xl bg-zinc-300 max-md:mt-10 max-md:max-w-full">

@@ -23,39 +23,27 @@ const mapContainerStyle = {
 };
 
 const center = {
-  lat: 0.3361209893422254, 
+  lat: 0.3361209893422254,
   lng: 100.64194674014762,
 };
 
 const MapComponent: React.FC = () => {
   const [markers, setMarkers] = useState<Array<{ lat: number; lng: number; description: string }>>([
-      { lat: center.lat, lng: center.lng, description: 'Candi Muara Takus' },
+    { lat: center.lat, lng: center.lng, description: 'Candi Muara Takus' },
   ]);
 
-  const MapClickHandler = () => {
-    useMapEvents({
-      click(e) {
-        setMarkers((current) => [
-          ...current,
-          {
-            lat: e.latlng.lat,
-            lng: e.latlng.lng,
-            description: 'New Marker'
-          },
-        ]);
-      },
-    });
-    return null;
-  };
-
   return (
-    <div className="my-8">
+    <div className="my-8 bg-teal-900">
+      <div className="pt-24 bg-teal-900 mb-10 text-6xl text-center text-white max-md:pt-10 max-md:max-w-full max-md:text-4xl font-serif">
+        <span className="">Lokasi Destinasi Wisata</span>
+        <br />
+        <span className="text-lime-200">Populer</span>
+      </div>
       <MapContainer center={center} zoom={8} style={mapContainerStyle}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
-        <MapClickHandler />
         {markers.map((marker, index) => (
           <Marker key={index} position={[marker.lat, marker.lng]} icon={customIcon}>
             <Popup>{marker.description}</Popup>

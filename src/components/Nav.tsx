@@ -5,9 +5,15 @@ const Nav = () => {
         MuaraTakus
       </div>
       <div className="flex gap-5 self-stretch my-auto font-normal">
-        <div>Profil</div>
-        <div>Destinasi</div>
-        <div className="flex-auto">Tentang Kami</div>
+        <div>
+          <a href="#umkm-section">Merch</a>
+        </div>
+        <div>
+          <a href="#destinasi-section">Destinasi</a>
+        </div>
+        <div className="flex-auto">
+          <a href="#destinasi-section">Tentang Kami</a>
+        </div>
       </div>
       <div className="justify-center self-stretch px-14 py-2.5 text-teal-900 whitespace-nowrap bg-lime-200 rounded-[30px] max-md:px-5">
         Mulai

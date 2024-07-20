@@ -38,7 +38,9 @@ export default function Landing() {
                     />
                   </div>
                   <div className="flex-auto my-auto text-2xl font-bold text-white">
-                    Mari Telusuri
+                    <a href="#paket-section">
+                      Mari Telusuri
+                    </a>
                   </div>
                 </div>
               </div>
