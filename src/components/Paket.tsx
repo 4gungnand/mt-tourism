@@ -4,7 +4,7 @@ const Paket = () => {
       <div className="h-screen bg-teal-900 gap-[60px] w-full flex flex-col items-center py-10">
         <div className="flex flex-col items-center mb-16 w-full max-w-[1075px] max-md:my-10 max-md:max-w-full">
           <div className="flex flex-col items-center text-center gap-3">
-            <h1 className="font-bold text-6xl text-white">
+            <h1 className="font-bold text-6xl text-white" id="paket-section">
               Paket 
             </h1>
             <p className="mt-12 text-xl leading-8 text-center text-teal-50 max-md:mt-10 max-md:max-w-full">

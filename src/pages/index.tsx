@@ -1,3 +1,4 @@
+import Nav from "components/Nav";
 import Destinasi from 'components/Destinasi';
 import Footer from 'components/Footer';
 import Intro from 'components/Intro';
@@ -11,20 +12,17 @@ const Map = dynamic(() => import('components/Map'), { ssr: false });
 
 const Home: NextPage = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100 scroll-smooth">
+        <Nav />
       <Landing />
-      <div className='-mt-20 relative z-10' id='destinasi-section'>
+      <div className='-mt-20 relative z-10'>
         <Destinasi />
       </div>
       <Intro />
       <Map />
-      <div id="umkm-section">
         <Umkm />
-      </div>
-      <div id="paket-section">
         <Paket />
-      </div>
-      <Footer />
+        <Footer />
     </div>
   );
 };

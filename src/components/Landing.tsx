@@ -1,18 +1,20 @@
-import Nav from "./Nav";
+import Image from "next/image";
 
 export default function Landing() {
   return (
     <div className="flex overflow-hidden relative flex-col justify-center self-stretch min-h-[900px]">
-      <img
+      <Image
         loading="lazy"
         src="/images/candi.jpeg"
+        alt="Candi Muara Takus"
         className="object-cover absolute inset-0 size-full"
+        width={1536}
+        height={2048}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-[#004400] to-[#002200] opacity-60"></div>
       <div className="flex relative justify-center items-center px-16 py-16 w-full shadow-sm max-md:px-5 max-md:max-w-full">
         <div className="flex flex-col mb-32 w-full max-w-[1034px] max-md:mb-10 max-md:max-w-full">
-          <Nav />
-          <div className="mt-40 text-6xl font-bold font-serif text-white max-md:mt-10 max-md:max-w-full max-md:text-4xl">
+          <div className="mt-24 text-6xl font-bold font-serif text-white max-md:mt-10 max-md:max-w-full max-md:text-4xl">
             <span className="">Mari Telusuri</span>
             <br />
             <span className="">Destinasi Wisata </span>
@@ -28,22 +30,21 @@ export default function Landing() {
                   memaksimalkan pengalaman anda.
                 </div>
               </div>
-              <div className="flex flex-col ml-5 w-[32%] max-md:ml-0 max-md:w-full">
+              <a href="#paket-section" className="flex flex-col ml-5 w-[32%] max-md:ml-0 max-md:w-full">
                 <div className="flex gap-5 self-stretch my-auto max-md:mt-10">
                   <div className="flex justify-center items-center px-4 bg-lime-200 h-[60px] rounded-[100px] w-[60px]">
-                    <img
-                      loading="lazy"
+                    <Image
                       src="/Arrow.svg"
-                      className=""
+                      width={24}
+                      height={24}
+                      alt="Arrow"
                     />
                   </div>
                   <div className="flex-auto my-auto text-2xl font-bold text-white">
-                    <a href="#paket-section">
-                      Mari Telusuri
-                    </a>
+                    Mari Telusuri
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>

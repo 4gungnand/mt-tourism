@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="flex flex-col items-center px-16 pt-20 pb-6 bg-white max-md:px-5">
+    <div className="flex flex-col items-center px-16 pt-20 pb-6 bg-white max-md:px-5" id="footer-section">
       <div className="flex flex-col w-full max-w-[1087px] max-md:max-w-full">
         <div className="flex gap-5 px-0.5 w-full max-md:flex-wrap max-md:max-w-full">
           <div className="flex flex-col">
