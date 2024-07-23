@@ -15,25 +15,21 @@ export default function Umkm() {
             <div className="flex gap-5 max-md:flex-col max-md:gap-0">
               {umkmCard({
                 title: "Topi",
-                desc: "Aksesoris yang cocok untuk menemani hari-hari Anda.",
                 img: "/images/umkm/topi.png",
                 alt: "Aksesoris 1",
               })}
               {umkmCard({
                 title: "T-Shirt",
-                desc: "Aksesoris yang cocok untuk menemani hari-hari Anda.",
                 img: "/images/umkm/tshirt.png",
                 alt: "Aksesoris 2",
               })}
               {umkmCard({
                 title: "Gelas",
-                desc: "Aksesoris yang cocok untuk menemani hari-hari Anda.",
                 img: "/images/umkm/gelas.png",
                 alt: "Aksesoris 3",
               })}
               {umkmCard({
                 title: "Gelang",
-                desc: "Aksesoris yang cocok untuk menemani hari-hari Anda.",
                 img: "/images/umkm/gelang.jpg",
                 alt: "Aksesoris 4",
               })
@@ -48,12 +44,10 @@ export default function Umkm() {
 
 const umkmCard = ({
   title,
-  desc,
   img,
   alt,
 }: {
   title: string;
-  desc: string;
   img: string;
   alt: string;
 }) => {
@@ -62,9 +56,6 @@ const umkmCard = ({
       <img src={img} alt={alt} className="mt-6 mx-auto w-36 h-36 rounded-md" />
       <div className="self-center mt-8 text-2xl font-bold max-md:mt-10">
         {title}
-      </div>
-      <div className="mt-3 text-base">
-        {desc}
       </div>
     </div>
   );

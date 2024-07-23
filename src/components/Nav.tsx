@@ -1,34 +1,110 @@
-const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
-  e.preventDefault();
-  const targetId = e.currentTarget.getAttribute('href');
-  const targetElement = targetId ? document.querySelector(targetId) : null;
-  if (targetElement) {
-    targetElement.scrollIntoView({ behavior: 'smooth' });
-  }
-};
+import { useState } from "react";
+import { handleSmoothScroll } from "styles/handleSmoothScroll";
 
 const Nav = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <nav className="fixed py-2 z-50 bg-teal-900 gap-5 items-center w-full text-2xl font-bold text-white max-md:flex-wrap max-md:max-w-full">
-      <div className="mx-10 flex gap-5">
-        <div className="flex-auto self-stretch my-auto text-4xl">
+    <nav className="fixed z-50 bg-teal-900 w-full text-2xl font-bold text-white">
+      <div className="my-3 mx-10 flex justify-between items-center">
+        <div className="text-3xl">
           MuaraTakus
         </div>
-        <div className="flex gap-5 self-stretch my-auto font-normal">
-        <div>
-            <a href="#destinasi-section" onClick={handleSmoothScroll}>Destinasi</a>
+        <div className="md:hidden">
+          <button onClick={toggleMenu} className="focus:outline-none">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {isMenuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
+        </div>
+        <div className="hidden md:flex gap-5 font-normal">
+          <div>
+            <a
+              href="#destinasi-section"
+              onClick={handleSmoothScroll}
+              className="relative transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 hover:after:w-full"
+            >
+              Destinasi
+            </a>
           </div>
           <div>
-            <a href="#umkm-section" onClick={handleSmoothScroll}>Merch</a>
+            <a
+              href="#umkm-section"
+              onClick={handleSmoothScroll}
+              className="relative transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 hover:after:w-full"
+            >
+              Merch
+            </a>
           </div>
           <div>
-            <a href="#footer-section" onClick={handleSmoothScroll}>Tentang Kami</a>
+            <a
+              href="#footer-section"
+              onClick={handleSmoothScroll}
+              className="relative transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 hover:after:w-full"
+            >
+              Tentang Kami
+            </a>
           </div>
         </div>
-        <a href="#paket-section" onClick={handleSmoothScroll} className="justify-center self-stretch px-14 py-2.5 text-teal-900 whitespace-nowrap bg-lime-200 rounded-[30px] max-md:px-5">
-          Mulai
-        </a>
       </div>
+      {isMenuOpen && (
+        <div className="bg-teal-200 mt-2 py-2">
+          <div className="flex flex-col gap-5 md:hidden font-normal mx-10 text-black">
+            <div>
+              <a
+                href="#destinasi-section"
+                onClick={handleSmoothScroll}
+                className="relative transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-black after:transition-width after:duration-300 hover:after:w-full"
+              >
+                Destinasi
+              </a>
+            </div>
+            <div>
+              <a
+                href="#umkm-section"
+                onClick={handleSmoothScroll}
+                className="relative transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-black after:transition-width after:duration-300 hover:after:w-full"
+              >
+                Merch
+              </a>
+            </div>
+            <div>
+              <a
+                href="#footer-section"
+                onClick={handleSmoothScroll}
+                className="relative transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-black after:transition-width after:duration-300 hover:after:w-full"
+              >
+                Tentang Kami
+              </a>
+            </div>
+          </div>
+        </div>
+
+      )}
     </nav>
   );
 };

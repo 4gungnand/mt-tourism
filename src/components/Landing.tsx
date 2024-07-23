@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { handleSmoothScroll } from "styles/handleSmoothScroll";
 
 export default function Landing() {
   return (
@@ -30,9 +31,9 @@ export default function Landing() {
                   memaksimalkan pengalaman anda.
                 </div>
               </div>
-              <a href="#paket-section" className="flex flex-col ml-5 w-[32%] max-md:ml-0 max-md:w-full">
+              <a href="#paket-section" className="flex flex-col ml-5 w-[32%] max-md:ml-0 max-md:w-full h" onClick={handleSmoothScroll}>
                 <div className="flex gap-5 self-stretch my-auto max-md:mt-10">
-                  <div className="flex justify-center items-center px-4 bg-lime-200 h-[60px] rounded-[100px] w-[60px]">
+                  <div className="flex justify-center items-center px-4 bg-lime-200 h-[60px] rounded-[100px] w-[60px] border hover:border-4 hover:border-white transition duration-300">
                     <Image
                       src="/Arrow.svg"
                       width={24}

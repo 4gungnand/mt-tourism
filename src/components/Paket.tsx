@@ -1,10 +1,10 @@
 const Paket = () => {
   return (
-    <div className="flex flex-col justify-center mb-48 bg-white">
+    <div className="flex flex-col justify-center mb-48 bg-white" id="paket-section">
       <div className="h-screen bg-teal-900 gap-[60px] w-full flex flex-col items-center py-10">
         <div className="flex flex-col items-center mb-16 w-full max-w-[1075px] max-md:my-10 max-md:max-w-full">
           <div className="flex flex-col items-center text-center gap-3">
-            <h1 className="font-bold text-6xl text-white" id="paket-section">
+            <h1 className="font-bold text-6xl text-white">
               Paket 
             </h1>
             <p className="mt-12 text-xl leading-8 text-center text-teal-50 max-md:mt-10 max-md:max-w-full">
@@ -71,7 +71,7 @@ const PricingCard = ({
     <div className="bg-ijo hover:scale-105 transition duration-500 text-center shadow-[0px_0px_50px_rgba(44,52,39,0.6)] flex flex-col p-10 text-white rounded-xl">
       <h1 className="font-semibold text-3xl">{title}</h1>
       <p className="font-bold text-4xl mt-5">Rp{price},-</p>
-      <hr className="h-px border-0 bg-[#D7C6AA] mt-4" />
+      <hr className="h-px border-0 bg-ijomuda mt-4" />
       <div className="mx-6 my-4 flex flex-col gap-3 text-center">
         <p className="font-medium text-xl">
           Transport <span className="font-bold">{desc.adaKendaran}</span>
@@ -86,7 +86,7 @@ const PricingCard = ({
           Foto <span className="font-bold">{desc.adaFoto}</span>
         </p>
       </div>
-      <button className="text-xl border-2 text-krem border-krem py-2 px-4 rounded-lg hover:text-ijo hover:bg-krem transition duration-300">
+      <button className="text-xl border-2 text-ijomuda border-ijomuda py-2 px-4 rounded-lg hover:text-ijo hover:bg-white transition duration-300">
         Beli
       </button>
     </div>

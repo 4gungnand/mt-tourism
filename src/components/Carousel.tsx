@@ -2,18 +2,15 @@ import React, { useRef, useState } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import slides from "../../data/destinasi.json";
 
 type Slide = {
-    url: string;
-    title: string;
-    desc: string;
+    url: string,
+    title: string,
+    desc: string,
 }
 
-type CarouselProps = {
-    slides: Slide[];
-};
-
-export default function Carousel({ slides }: CarouselProps) {
+export default function Carousel() {
     const sliderRef = useRef<Slider | null>(null);
     const [current, setCurrent] = useState(3); // Start with the fourth image (index 3)
 
@@ -32,7 +29,7 @@ export default function Carousel({ slides }: CarouselProps) {
         <div className="relative w-full flex justify-center items-center py-20">
             <div className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 relative"> {/* Adjust width to make the carousel wider */}
                 <Slider ref={sliderRef} {...settings}>
-                    {slides.map((slide, index) => (
+                    {slides.map((slide: Slide, index: number) => (
                         <div key={index} className="h-96 flex justify-center items-center">
                             <img
                                 src={slide.url}

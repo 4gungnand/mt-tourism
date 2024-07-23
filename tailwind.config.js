@@ -10,6 +10,11 @@ module.exports = {
         serif: ['"Times New Roman"', 'ui-serif', 'Georgia', 'Cambria', "Times New Roman", 'Times', 'serif'],
         sans: ['Quattrocento Sans', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
       },
+      colors: {
+        ijo: "#144149",
+        ijo2: "#164440",
+        ijomuda: "D9ED82",
+      },
     },
   },
   plugins: [],
