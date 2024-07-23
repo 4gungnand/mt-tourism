@@ -72,31 +72,31 @@ const Nav = () => {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="bg-teal-200 mt-2 py-2">
-          <div className="flex flex-col gap-5 md:hidden font-normal mx-10 text-black">
-            <div>
+        <div className="bg-white mt-2">
+          <div className="flex flex-col md:hidden font-normal text-black">
+            <div className="hover:bg-teal-100 py-2">
               <a
                 href="#destinasi-section"
                 onClick={handleSmoothScroll}
-                className="relative transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-black after:transition-width after:duration-300 hover:after:w-full"
+                className="relative ml-10 transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-black after:transition-width after:duration-300 hover:after:w-full"
               >
                 Destinasi
               </a>
             </div>
-            <div>
+            <div  className="hover:bg-teal-100 py-2">
               <a
                 href="#umkm-section"
                 onClick={handleSmoothScroll}
-                className="relative transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-black after:transition-width after:duration-300 hover:after:w-full"
+                className="relative ml-10 transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-black after:transition-width after:duration-300 hover:after:w-full"
               >
                 Merch
               </a>
             </div>
-            <div>
+            <div  className="hover:bg-teal-100 py-2">
               <a
                 href="#footer-section"
                 onClick={handleSmoothScroll}
-                className="relative transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-black after:transition-width after:duration-300 hover:after:w-full"
+                className="relative ml-10 transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-black after:transition-width after:duration-300 hover:after:w-full"
               >
                 Tentang Kami
               </a>

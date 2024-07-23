@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { handleSmoothScroll } from 'styles/handleSmoothScroll';
 
 export default function Intro() {
   return (
@@ -7,7 +8,7 @@ export default function Intro() {
         <div className="mt-24 mb-16 max-w-full w-[969px] max-md:my-10">
           <div className="flex gap-10 max-md:flex-col max-md:gap-0">
             <div className="flex flex-col w-[57%] max-md:ml-0 max-md:w-full">
-              <div className="flex flex-col grow items-end px-10 pt-20 h-[800px] pb-px w-full text-md font-bold leading-9 text-black rounded-3xl max-md:mt-10 max-md:max-w-full relative overflow-hidden">
+              <div className="flex flex-col grow items-end px-10 pt-20 h-[600px] pb-px w-full text-md font-bold leading-9 text-black rounded-3xl max-md:mt-10 max-md:max-w-full relative overflow-hidden">
                 <Image
                   src="/images/intro.jpg"
                   alt="intro"
@@ -24,12 +25,13 @@ export default function Intro() {
                   untuk Penjelajah
                 </div>
                 <div className="mt-8 text-xl leading-8">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Temukan berbagai destinasi wisata menarik di sekitar
+                  Muara Takus. Jelajahi keindahan alam dan sejarah
+                  yang menarik di setiap sudutnya.
                 </div>
-                <div className="justify-center self-start px-14 py-2.5 mt-7 text-2xl whitespace-nowrap bg-lime-200 rounded-[30px] max-md:px-5">
+                <a onClick={handleSmoothScroll} href='#paket-section' className="justify-center self-start px-14 py-2.5 mt-7 text-2xl whitespace-nowrap bg-lime-200 rounded-[30px] max-md:px-5">
                   Mulai
-                </div>
+                </a>
               </div>
             </div>
           </div>

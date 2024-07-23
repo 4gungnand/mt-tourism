@@ -13,7 +13,7 @@ module.exports = {
       colors: {
         ijo: "#144149",
         ijo2: "#164440",
-        ijomuda: "D9ED82",
+        ijomuda: "#D9ED82",
       },
     },
   },

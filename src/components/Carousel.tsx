@@ -8,7 +8,29 @@ type Slide = {
     url: string,
     title: string,
     desc: string,
-}
+};
+
+const NextArrow = (props: any) => {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={`${className} text-black bg-white rounded-full p-2 shadow-lg hover:bg-gray-300 transition`}
+            style={{ ...style, display: "block", right: "10px", zIndex: 2 }}
+            onClick={onClick}
+        />
+    );
+};
+
+const PrevArrow = (props: any) => {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={`${className} text-black bg-white rounded-full p-2 shadow-lg hover:bg-gray-300 transition`}
+            style={{ ...style, display: "block", left: "10px", zIndex: 2 }}
+            onClick={onClick}
+        />
+    );
+};
 
 export default function Carousel() {
     const sliderRef = useRef<Slider | null>(null);
@@ -23,6 +45,8 @@ export default function Carousel() {
         centerMode: true,
         centerPadding: '60px', // Adjust center padding to create larger gaps and centering effect
         beforeChange: (oldIndex: number, newIndex: number) => setCurrent(newIndex),
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
     };
 
     return (
@@ -53,8 +77,8 @@ export default function Carousel() {
                                 animation: 'fadeIn 1s ease-out',
                             }}
                         >
-                            <h1 className='text-2xl font-bold'>{slide.title}</h1>
-                            <p className='text-lg'>{slide.desc}</p>
+                            <h1 className='text-2xl font-bold mx-5'>{slide.title}</h1>
+                            <p className='text-lg mx-5'>{slide.desc}</p>
                         </div>
                     )
                 ))}
