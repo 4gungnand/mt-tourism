@@ -11,9 +11,9 @@ const Nav = () => {
   return (
     <nav className="fixed z-50 bg-teal-900 w-full text-2xl font-bold text-white">
       <div className="my-3 mx-10 flex justify-between items-center">
-        <div className="text-3xl">
+        <a href="#landing-section" className="text-3xl" onClick={handleSmoothScroll}>
           MuaraTakus
-        </div>
+        </a> 
         <div className="md:hidden">
           <button onClick={toggleMenu} className="focus:outline-none">
             <svg

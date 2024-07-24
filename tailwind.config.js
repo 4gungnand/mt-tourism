@@ -1,19 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx}',
-    './src/components/**/*.{js,ts,jsx,tsx}',
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       fontFamily: {
-        serif: ['"Times New Roman"', 'ui-serif', 'Georgia', 'Cambria', "Times New Roman", 'Times', 'serif'],
-        sans: ['Quattrocento Sans', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+        serif: ['Times New Roman', 'ui-serif', 'Georgia', 'Cambria', "Times New Roman", 'Times', 'serif'],
+        sans: ['Segoe UI', 'Roboto', "Helvetica Neue",],
       },
       colors: {
+        color1: "#F1FBFB",
+        color2: "#2B3D37",
+        color3: "#164440",
         ijo: "#144149",
-        ijo2: "#164440",
-        ijomuda: "#D9ED82",
+        abu: "#504F4A",
+        nipis: "#D9ED82",
       },
     },
   },

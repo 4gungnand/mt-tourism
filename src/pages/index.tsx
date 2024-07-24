@@ -13,16 +13,16 @@ const Map = dynamic(() => import('components/Map'), { ssr: false });
 const Home: NextPage = () => {
   return (
     <div className="min-h-screen bg-gray-100 scroll-smooth">
-        <Nav />
+      <Nav />
       <Landing />
       <div className='-mt-20 relative z-10'>
         <Destinasi />
       </div>
       <Intro />
       <Map />
-        <Umkm />
-        <Paket />
-        <Footer />
+      <Umkm />
+      <Paket />
+      <Footer />
     </div>
   );
 };

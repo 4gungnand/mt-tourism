@@ -19,10 +19,9 @@ export default function Destinasi() {
                         </div>
                     ))}
                 </div>
-                <div className="mt-10 text-6xl text-center text-white max-md:mt-10 max-md:max-w-full max-md:text-4xl font-serif">
+                <div className="mt-10 text-6xl text-center text-white max-md:mt-10 max-md:max-w-full max-md:text-4xl font-serif flex flex-col">
                     <span>Rekomendasi Destinasi Wisata </span>
-                    <br />
-                    <span className="text-lime-200">Populer</span>
+                    <span className="text-lime-200 mt-5">Populer di Kampar</span>
                 </div>
                 <Carousel />
             </div>

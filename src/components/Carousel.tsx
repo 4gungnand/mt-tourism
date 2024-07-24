@@ -15,7 +15,7 @@ const NextArrow = (props: any) => {
     return (
         <div
             className={`${className} text-black bg-white rounded-full p-2 shadow-lg hover:bg-gray-300 transition`}
-            style={{ ...style, display: "block", right: "10px", zIndex: 2 }}
+            style={{ ...style, display: "block", right: "-30px", zIndex: 2 }}
             onClick={onClick}
         />
     );
@@ -26,7 +26,7 @@ const PrevArrow = (props: any) => {
     return (
         <div
             className={`${className} text-black bg-white rounded-full p-2 shadow-lg hover:bg-gray-300 transition`}
-            style={{ ...style, display: "block", left: "10px", zIndex: 2 }}
+            style={{ ...style, display: "block", left: "-30px", zIndex: 2 }}
             onClick={onClick}
         />
     );
@@ -47,14 +47,15 @@ export default function Carousel() {
         beforeChange: (oldIndex: number, newIndex: number) => setCurrent(newIndex),
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
+        focusOnSelect: true,
     };
 
     return (
-        <div className="relative w-full flex justify-center items-center py-20">
+        <div className="relative w-full flex flex-col items-center py-20">
             <div className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 relative"> {/* Adjust width to make the carousel wider */}
                 <Slider ref={sliderRef} {...settings}>
                     {slides.map((slide: Slide, index: number) => (
-                        <div key={index} className="h-96 flex justify-center items-center">
+                        <div key={index} className="h-96 flex justify-center items-center relative">
                             <img
                                 src={slide.url}
                                 alt={`Slide ${index}`}
@@ -65,24 +66,34 @@ export default function Carousel() {
                                     transform: index === current ? 'scale(1)' : 'scale(0.8)',
                                 }}
                             />
+                            {index === current && (
+                                <div
+                                    className='absolute bottom-0 left-0 w-full h-1/6 bg-black bg-opacity-50 flex flex-col justify-center text-white rounded-b-xl text-center transition '
+                                    style={{
+                                        zIndex: 3, // Ensure the text is on top of the image
+                                        animation: 'fadeIn 1s ease-out',
+                                    }}
+                                >
+                                    <h1 className='text-2xl font-bold mx-5'>{slide.title}</h1>
+                                </div>
+                            )}
                         </div>
                     ))}
                 </Slider>
-                {slides.map((slide, index) => (
-                    index === current && (
-                        <div
-                            key={index}
-                            className='absolute bottom-[-160px] left-1/2 transform -translate-x-1/2 w-full max-w-5xl mx-auto text-center text-white'
-                            style={{
-                                animation: 'fadeIn 1s ease-out',
-                            }}
-                        >
-                            <h1 className='text-2xl font-bold mx-5'>{slide.title}</h1>
-                            <p className='text-lg mx-5'>{slide.desc}</p>
-                        </div>
-                    )
-                ))}
             </div>
+            {slides.map((slide, index) => (
+                index === current && (
+                    <div
+                        key={index}
+                        className='mt-10 text-center w-full max-w-5xl mx-auto text-white'
+                        style={{
+                            animation: 'fadeIn 1s ease-out',
+                        }}
+                    >
+                        <p className='text-lg mx-5'>{slide.desc}</p>
+                    </div>
+                )
+            ))}
         </div>
     );
 }

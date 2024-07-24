@@ -3,7 +3,7 @@ export default function Umkm() {
     <div className="flex flex-col justify-center bg-white" id="umkm-section" >
       <div className="flex justify-center items-center px-16 py-10 w-full bg-teal-50 max-md:px-5 max-md:max-w-full">
         <div className="flex flex-col items-center mb-16 w-full max-w-[1075px] max-md:my-10 max-md:max-w-full">
-          <div className="mt-20 text-5xl font-bold text-teal-900 max-md:max-w-full max-md:text-4xl">
+          <div className="mt-20 text-5xl font-bold text-teal-900 max-md:max-w-full max-md:text-4xl font-serif">
             Aksesoris Desa Muara Takus
           </div>
           <div className="mt-11 text-xl leading-8 text-center text-teal-900 max-md:mt-10 max-md:max-w-full">
@@ -12,7 +12,7 @@ export default function Umkm() {
             terbaik untuk kita semua.
           </div>
           <div className="self-stretch mt-16 max-md:mt-10 max-md:max-w-full">
-            <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+            <div className="flex gap-8 max-md:flex-col max-md:gap-0">
               {umkmCard({
                 title: "Topi",
                 img: "/images/umkm/topi.png",

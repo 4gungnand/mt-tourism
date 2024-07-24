@@ -17,7 +17,7 @@ const Paket = () => {
             <div className="flex gap-[60px] items-center justify-center">
               <PricingCard
                 title="Biasa"
-                price="400.000"
+                price="250.000"
                 desc={{
                   adaGuide: "Ya",
                   adaMakan: "Tidak",
@@ -68,7 +68,7 @@ const PricingCard = ({
   };
 }) => {
   return (
-    <div className="bg-ijo hover:scale-105 transition duration-500 text-center shadow-[0px_0px_50px_rgba(44,52,39,0.6)] flex flex-col p-10 text-white rounded-xl">
+    <div className="bg-ijo border-2 border-white hover:scale-105 transition duration-500 text-center shadow-[0px_0px_50px_rgba(44,52,39,0.6)] flex flex-col p-10 text-white rounded-xl border-0 ">
       <h1 className="font-semibold text-3xl">{title}</h1>
       <p className="font-bold text-4xl mt-5">Rp{price},-</p>
       <hr className="h-px border-0 bg-ijo mt-4" />

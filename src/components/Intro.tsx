@@ -19,7 +19,7 @@ export default function Intro() {
             </div>
             <div className="flex flex-col ml-5 w-[43%] max-md:ml-0 max-md:w-full">
               <div className="flex flex-col self-stretch my-auto font-bold text-teal-900 max-md:mt-10">
-                <div className="text-5xl max-md:text-4xl">
+                <div className="text-5xl max-md:text-4xl font-serif">
                   Muara Takus
                   <br />
                   untuk Penjelajah
