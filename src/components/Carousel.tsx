@@ -15,7 +15,7 @@ const NextArrow = (props: any) => {
     return (
         <div
             className={`${className} text-black bg-white rounded-full p-2 shadow-lg hover:bg-gray-300 transition`}
-            style={{ ...style, display: "block", right: "-30px", zIndex: 2 }}
+            style={{ ...style, display: "block", right: "0px", zIndex: 2 }}
             onClick={onClick}
         />
     );
@@ -26,7 +26,7 @@ const PrevArrow = (props: any) => {
     return (
         <div
             className={`${className} text-black bg-white rounded-full p-2 shadow-lg hover:bg-gray-300 transition`}
-            style={{ ...style, display: "block", left: "-30px", zIndex: 2 }}
+            style={{ ...style, display: "block", left: "    0px", zIndex: 2 }}
             onClick={onClick}
         />
     );

@@ -68,21 +68,21 @@ const PricingCard = ({
   };
 }) => {
   return (
-    <div className="bg-ijo border-2 border-white hover:scale-105 transition duration-500 text-center shadow-[0px_0px_50px_rgba(44,52,39,0.6)] flex flex-col p-10 text-white rounded-xl border-0 ">
-      <h1 className="font-semibold text-3xl">{title}</h1>
-      <p className="font-bold text-4xl mt-5">Rp{price},-</p>
+    <div className="bg-ijo border-2 border-white hover:scale-105 transition duration-500 text-center shadow-[0px_0px_50px_rgba(44,52,39,0.6)] flex flex-col p-10 text-white rounded-xl ">
+      <h1 className="font-semibold text-3xl max-sm:text-xl">{title}</h1>
+      <p className="font-bold text-4xl max-sm:text-2xl mt-5">Rp{price},-</p>
       <hr className="h-px border-0 bg-ijo mt-4" />
       <div className="mx-6 my-4 flex flex-col gap-3 text-center">
-        <p className="font-medium text-xl">
+        <p className="font-medium text-xl max-sm:text-sm">
           Transport <span className="font-bold">{desc.adaKendaran}</span>
         </p>
-        <p className="font-medium text-xl">
+        <p className="font-medium text-xl max-sm:text-sm">
           Guide <span className="font-bold">{desc.adaGuide}</span>
         </p>
-        <p className="font-medium text-xl">
+        <p className="font-medium text-xl max-sm:text-sm">
           Makanan <span className="font-bold">{desc.adaMakan}</span>
         </p>
-        <p className="font-medium text-xl">
+        <p className="font-medium text-xl max-sm:text-sm">
           Foto <span className="font-bold">{desc.adaFoto}</span>
         </p>
       </div>
