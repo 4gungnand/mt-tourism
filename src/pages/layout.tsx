@@ -1,19 +1,19 @@
-import "../styles/globals.css";
+import "./globals.css";
 import localFont from "next/font/local";
 import { metadata } from "../../public/metadata";
 
 const poppins = localFont({
   src: [
     {
-      path: "../../public/fonts/Poppins-Regular.ttf",
+      path: "/fonts/Poppins-Regular.ttf",
       weight: "400",
     },
     {
-      path: "../../public/fonts/Poppins-Medium.ttf",
+      path: "/fonts/Poppins-Medium.ttf",
       weight: "500",
     },
     {
-      path: "../../public/fonts/Poppins-Bold.ttf",
+      path: "/fonts/Poppins-Bold.ttf",
       weight: "700",
     },
   ],
@@ -23,7 +23,7 @@ const poppins = localFont({
 const krifon = localFont({
   src: [
     {
-      path: "../../public/fonts/DMSerifDisplay-Regular.ttf",
+      path: "/fonts/DMSerifDisplay-Regular.ttf",
       weight: "400",
     },
   ],
@@ -36,8 +36,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
-      {children}
-    </div>
+    <html
+      lang="en"
+      className={`${poppins.variable} ${krifon.variable} bg-color1 font-sans`}
+    >
+      <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+      </head>
+      <body>{children}</body>
+    </html>
   );
 }
