@@ -19,7 +19,7 @@ const Home: NextPage = () => {
         <Destinasi />
       </div>
       <Intro />
-      <Map />
+      {/* <Map /> */}
       <Umkm />
       <Paket />
       <Footer />
