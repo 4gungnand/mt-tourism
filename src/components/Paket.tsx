@@ -2,19 +2,17 @@ const Paket = () => {
   return (
     <div className="flex flex-col justify-center bg-white" id="paket-section">
       <div className="bg-teal-900 gap-[60px] w-full flex flex-col items-center pt-10 text-white">
-        <div className="flex flex-col items-center mb-16 w-full max-w-[1075px] max-md:my-10 max-md:max-w-full mt-10" >
+        <div className="flex flex-col items-center mb-16 w-full max-w-[1075px] max-md:my-10 max-md:max-w-full mt-10">
           <div className="flex flex-col items-center text-center gap-3">
-            <h1 className="font-bold text-6xl">
-              Paket 
-            </h1>
+            <h1 className="font-bold text-6xl">Paket</h1>
             <p className="mt-12 text-xl leading-8 text-center max-md:mt-10 max-md:max-w-full">
               Pilih paket wisata yang sesuai dengan kebutuhan Anda. Dapatkan
-              akses ke berbagai fitur premium yang akan membantu Anda merencanakan
-              perjalanan wisata yang lebih efisien dan menyenangkan.
+              akses ke berbagai fitur premium yang akan membantu Anda
+              merencanakan perjalanan wisata yang lebih efisien dan menyenangkan.
             </p>
           </div>
           <div className="self-stretch mt-16 max-md:mt-10 max-md:max-w-full mb-16">
-            <div className="flex gap-[60px] items-center justify-center">
+            <div className="flex flex-col md:flex-row gap-[60px] items-center justify-center">
               <PricingCard
                 title="Biasa"
                 price="250.000"
@@ -47,7 +45,6 @@ const Paket = () => {
         </div>
       </div>
     </div>
-
   );
 };
 

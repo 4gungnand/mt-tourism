@@ -54,7 +54,7 @@ export default function Footer() {
                   <div className="text-2xl font-bold">Menu</div>
                   <div className="mt-7">Home</div>
                   <div className="mt-5">Destinasi</div>
-                  <div className="mt-5">Tentang Kami</div>
+                  <a href="/articles" className="mt-5">Artikel</a>
                 </div>
               </div>
               <div className="flex flex-col ml-5 w-[29%] max-md:ml-0 max-md:w-full">

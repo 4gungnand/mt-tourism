@@ -1,5 +1,6 @@
 import "./globals.css";
 import localFont from "next/font/local";
+import { metadata } from "../../public/metadata";
 
 const poppins = localFont({
   src: [
@@ -29,14 +30,6 @@ const krifon = localFont({
   variable: "--font-dmserifdisplay",
 });
 
-export const metadata = {
-  title: "Muara Takus Unofficial Website",
-  description: "An unofficial website for Muara Takus made by kamparmemancar team KKN-PPM UGM 2024",
-  icons: {
-    icon: "/logos/logo.svg",
-  },
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -47,6 +40,10 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} ${krifon.variable} bg-color1 font-sans`}
     >
+      <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+      </head>
       <body>{children}</body>
     </html>
   );
