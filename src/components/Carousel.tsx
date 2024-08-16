@@ -37,10 +37,6 @@ export default function Carousel() {
     const [current, setCurrent] = useState(3); // Start with the fourth image (index 3)
 
     const settings = {
-        infinite: true,
-        speed: 800, // Increase the transition speed for smoother animation
-        slidesToShow: 3,
-        slidesToScroll: 1,
         initialSlide: current,
         centerMode: true,
         centerPadding: '60px', // Adjust center padding to create larger gaps and centering effect
@@ -48,39 +44,65 @@ export default function Carousel() {
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
         focusOnSelect: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
     };
 
     return (
         <div className="relative w-full flex flex-col items-center py-20">
-            <div className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 relative"> {/* Adjust width to make the carousel wider */}
+            <div className="w-full md:w-4/5 lg:w-3/4 xl:w-2/3 relative">
                 <Slider ref={sliderRef} {...settings}>
                     {slides.map((slide: Slide, index: number) => (
-                        <div key={index} className="h-96 flex justify-center items-center relative">
+                        <div key={index} className="h-[600px] flex justify-center items-center relative">
                             <img
                                 src={slide.url}
                                 alt={`Slide ${index}`}
-                                className="object-cover w-full h-full rounded-xl"
+                                className="object-cover w-full h-[600px] rounded-xl mx-auto"
                                 style={{
                                     zIndex: index === current ? 2 : 1,
-                                    transition: 'transform 0.8s ease-in-out', // Smoother transition
+                                    transition: 'transform 0.8s ease-in-out',
                                     transform: index === current ? 'scale(1)' : 'scale(0.8)',
                                 }}
                             />
                             {index === current && (
                                 <div
-                                    className='absolute bottom-0 left-0 w-full h-1/6 bg-black bg-opacity-50 flex flex-col justify-center text-white rounded-b-xl text-center transition '
+                                    className="absolute bottom-0 left-0 w-full h-1/6 bg-black bg-opacity-50 flex flex-col justify-center text-white rounded-b-xl text-center transition"
                                     style={{
-                                        zIndex: 3, // Ensure the text is on top of the image
+                                        zIndex: 3,
                                         animation: 'fadeIn 1s ease-out',
                                     }}
                                 >
-                                    <h1 className='text-2xl font-bold mx-5'>{slide.title}</h1>
+                                    <h1 className="text-2xl font-bold mx-5 md:text-xl lg:text-2xl xl:text-3xl">
+                                        {slide.title}
+                                    </h1>
                                 </div>
                             )}
                         </div>
                     ))}
                 </Slider>
             </div>
+
             {slides.map((slide, index) => (
                 index === current && (
                     <div

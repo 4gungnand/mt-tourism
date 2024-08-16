@@ -15,7 +15,7 @@ export default function Intro() {
             />
           </div>
           <div className="flex flex-col items-center text-center w-full">
-            <div className="text-5xl font-serif text-teal-900 font-bold">
+            <div className="text-5xl max-md:text-4xl font-serif text-teal-900 font-bold">
               Surga Alam dan Harta Budaya Kampar
             </div>
             <div className="mt-8 text-md leading-8 font-normal text-black">
