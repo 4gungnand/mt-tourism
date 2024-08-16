@@ -1,4 +1,3 @@
-import "../styles/globals.css";
 import localFont from "next/font/local";
 import { metadata } from "../../public/metadata";
 
