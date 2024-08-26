@@ -17,19 +17,19 @@ export default function Footer() {
                 <img
                   loading="lazy"
                   srcSet="/Instagram.svg"
-                  className="shrink-0 w-6 aspect-square"
+                  className="shrink-0 w-12 aspect-square"
                 />
               </a>
               <a href="https://www.tiktok.com/@kampar_memancar" target="_blank" rel="noopener noreferrer">
                 <img
                   loading="lazy"
                   srcSet="TikTok.svg"
-                  className="shrink-0 w-6 aspect-square"
+                  className="shrink-0 w-12 aspect-square"
                 />
               </a>
             </div>
           </div>
-          <div className="flex flex-wrap flex-auto my-auto max-w-full">
+          <div className="flex flex-wrap flex-auto my-auto max-w-full gap-2">
             <div className="flex flex-col w-full sm:w-[calc(33%-10px)]">
               <div className="text-2xl font-bold text-teal-900">Menu</div>
               <div className="mt-7 text-xl text-teal-900">Home</div>

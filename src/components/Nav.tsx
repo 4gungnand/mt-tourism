@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { handleSmoothScroll } from "styles/handleSmoothScroll";
+import Image from 'next/image';
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,10 +10,10 @@ const Nav = () => {
   };
 
   return (
-    <nav className="fixed z-50 bg-teal-900 w-full text-2xl font-bold text-white">
-      <div className="my-3 mx-10 flex justify-between items-center">
+    <nav className="fixed z-50 bg-ijo opacity-70 w-full text-2xl font-bold text-white">
+      <div className="my-6 mx-10 flex items-center justify-between">
         <a href="#landing-section" className="text-3xl" onClick={handleSmoothScroll}>
-          MuaraTakus
+         <Image src="/logos/logo.svg" alt="logo" width={50} height={50} />
         </a> 
         <div className="md:hidden">
           <button onClick={toggleMenu} className="focus:outline-none">
@@ -46,7 +47,7 @@ const Nav = () => {
             <a
               href="#destinasi-section"
               onClick={handleSmoothScroll}
-              className="relative transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 hover:after:w-full"
+              className="relative transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 hover:after:w-full hover:text-gray-400"
             >
               Destinasi
             </a>
@@ -55,55 +56,73 @@ const Nav = () => {
             <a
               href="#umkm-section"
               onClick={handleSmoothScroll}
-              className="relative transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 hover:after:w-full"
+              className="relative transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 hover:after:w-full hover:text-gray-400"
             >
               Merch
             </a>
           </div>
           <div>
             <a
+              href="#paket-section"
+              onClick={handleSmoothScroll}
+              className="relative transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 hover:after:w-full hover:text-gray-400"
+            >
+              Paket
+            </a>
+          </div>
+          <div className="flex">
+            <a
               href="#footer-section"
               onClick={handleSmoothScroll}
-              className="relative transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 hover:after:w-full"
+              className="relative transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-white after:transition-width after:duration-300 hover:after:w-full hover:text-gray-400"
             >
               Tentang Kami
             </a>
+            <svg aria-hidden="true" height="9" viewBox="0 0 6 6" width="9"><path d="M1.25215 5.54731L0.622742 4.9179L3.78169 1.75597H1.3834L1.38936 0.890915H5.27615V4.78069H4.40513L4.41109 2.38538L1.25215 5.54731Z" fill="white"></path></svg>
           </div>
         </div>
       </div>
       {isMenuOpen && (
-        <div className="bg-white mt-2">
-          <div className="flex flex-col md:hidden font-normal text-black">
-            <div className="hover:bg-teal-100 py-2">
+        <div className="bg-transparent mt-2">
+          <div className="flex flex-col md:hidden font-normal text-white">
+            <div className="hover:bg-teal-800 py-2">
               <a
                 href="#destinasi-section"
                 onClick={handleSmoothScroll}
-                className="relative ml-10 transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-black after:transition-width after:duration-300 hover:after:w-full"
+                className="relative ml-10"
               >
                 Destinasi
               </a>
             </div>
-            <div  className="hover:bg-teal-100 py-2">
+            <div  className="hover:bg-teal-800 py-2">
               <a
                 href="#umkm-section"
                 onClick={handleSmoothScroll}
-                className="relative ml-10 transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-black after:transition-width after:duration-300 hover:after:w-full"
+                className="relative ml-10"
               >
                 Merch
               </a>
             </div>
-            <div  className="hover:bg-teal-100 py-2">
+            <div  className="hover:bg-teal-800 py-2">
+              <a
+                href="#paket-section"
+                onClick={handleSmoothScroll}
+                className="relative ml-10"
+              >
+                Paket Wisata
+              </a>
+            </div>
+            <div  className="hover:bg-teal-800 py-2">
               <a
                 href="#footer-section"
                 onClick={handleSmoothScroll}
-                className="relative ml-10 transition duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-black after:transition-width after:duration-300 hover:after:w-full"
+                className="relative ml-10"
               >
                 Tentang Kami
               </a>
             </div>
           </div>
         </div>
-
       )}
     </nav>
   );

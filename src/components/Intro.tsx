@@ -18,7 +18,7 @@ export default function Intro() {
             <div className="text-5xl max-md:text-4xl font-serif text-teal-900 font-bold">
               Surga Alam dan Harta Budaya Kampar
             </div>
-            <div className="mt-8 text-md leading-8 font-normal text-black">
+            <div className="mt-8 text-xl max-md:text-lg leading-8 font-normal text-black">
               Setiap sudut Kampar menyimpan keindahan alam yang luar biasa, dari hutan hijau yang rimbun hingga air terjun yang mempesona. Di balik setiap pemandangan alam yang menakjubkan, tersembunyi pula harta budaya yang tak ternilai, berupa tradisi, seni, dan sejarah yang mendalam. Bersiaplah untuk merasakan pengalaman tak terlupakan yang akan menggetarkan jiwa dan memperkaya wawasan, dalam sebuah perjalanan yang merangkai keajaiban alam dan kebudayaan menjadi satu kesatuan yang utuh dan magis.
             </div>
           </div>
