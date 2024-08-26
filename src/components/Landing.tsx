@@ -43,7 +43,7 @@ export default function Landing() {
                 <div className="flex gap-5 self-stretch my-auto max-md:mt-10 transition duration-300 hover:scale-105">
                   <div className="flex justify-center items-center bg-lime-200 h-[50px] rounded-[100px] w-[50px]">
                     <Image
-                      src="/Arrow.svg"
+                      src="/arrow.svg"
                       width={25}
                       height={25}
                       alt="Arrow"
